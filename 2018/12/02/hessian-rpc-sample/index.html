@@ -8,6 +8,7 @@
   <title>Hessian RPC调用例子 | 上下而求索</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Hessian是一个轻量级的RPC框架，它可以以WEB接口的形式提供RPC服务，因为Hessian是一个二进制协议，所以特别适合用来传送二进制数据。下面就用一个简单的例子来演示一下怎么使用Hessian。   首先创建一个Spring Boot Web工程，这个通过Spring Initializer页面就可以创建了，Dependencies里面选上Web就行了。 用Eclipse导入这个工程，然">
+<meta name="keywords" content="Java,RPC,Hessian">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hessian RPC调用例子">
 <meta property="og:url" content="https://swordinhand.github.io/2018/12/02/hessian-rpc-sample/index.html">
@@ -15,7 +16,7 @@
 <meta property="og:description" content="Hessian是一个轻量级的RPC框架，它可以以WEB接口的形式提供RPC服务，因为Hessian是一个二进制协议，所以特别适合用来传送二进制数据。下面就用一个简单的例子来演示一下怎么使用Hessian。   首先创建一个Spring Boot Web工程，这个通过Spring Initializer页面就可以创建了，Dependencies里面选上Web就行了。 用Eclipse导入这个工程，然">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://swordinhand.github.io/2018/12/02/hessian-rpc-sample/images/hessian_code_structure.png">
-<meta property="og:updated_time" content="2018-12-02T07:24:37.941Z">
+<meta property="og:updated_time" content="2018-12-02T07:37:49.385Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hessian RPC调用例子">
 <meta name="twitter:description" content="Hessian是一个轻量级的RPC框架，它可以以WEB接口的形式提供RPC服务，因为Hessian是一个二进制协议，所以特别适合用来传送二进制数据。下面就用一个简单的例子来演示一下怎么使用Hessian。   首先创建一个Spring Boot Web工程，这个通过Spring Initializer页面就可以创建了，Dependencies里面选上Web就行了。 用Eclipse导入这个工程，然">
@@ -61,7 +62,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://swordinhand.github.io"></form>
@@ -109,9 +110,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://swordinhand.github.io/2018/12/02/hessian-rpc-sample/" data-id="cjp6kjijl00015gj5vnsl5z9c" class="article-share-link">Share</a>
+      <a data-url="https://swordinhand.github.io/2018/12/02/hessian-rpc-sample/" data-id="cjp6kpzfg0005gsj51p5tsemy" class="article-share-link">Teilen</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hessian/">Hessian</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RPC/">RPC</a></li></ul>
+
     </footer>
   </div>
   
@@ -120,7 +123,7 @@
   
   
     <a href="/2018/11/18/eclipse-collections-intro/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Älter</strong>
       <div class="article-nav-title">Eclipse Collections简介</div>
     </a>
   
@@ -140,7 +143,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Eclipse-Collections/">Eclipse Collections</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IDEA/">IDEA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/maven/">maven</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xml/">xml</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Eclipse-Collections/">Eclipse Collections</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hessian/">Hessian</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IDEA/">IDEA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RPC/">RPC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/maven/">maven</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xml/">xml</a></li></ul>
     </div>
   </div>
 
@@ -150,14 +153,14 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Eclipse-Collections/" style="font-size: 10px;">Eclipse Collections</a> <a href="/tags/IDEA/" style="font-size: 10px;">IDEA</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/xml/" style="font-size: 10px;">xml</a>
+      <a href="/tags/Eclipse-Collections/" style="font-size: 10px;">Eclipse Collections</a> <a href="/tags/Hessian/" style="font-size: 10px;">Hessian</a> <a href="/tags/IDEA/" style="font-size: 10px;">IDEA</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/RPC/" style="font-size: 10px;">RPC</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/xml/" style="font-size: 10px;">xml</a>
     </div>
   </div>
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li></ul>
     </div>
@@ -167,7 +170,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
         
